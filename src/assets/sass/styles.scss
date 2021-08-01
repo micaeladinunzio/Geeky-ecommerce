@@ -1,0 +1,485 @@
+@import '../variables/main';
+@include resetStyles;
+
+
+body {
+background-color:$main-blue;
+
+}
+
+
+//*mobile
+
+@media  (min-width: 320px)  {
+  .navegador {
+    position: fixed;
+    background:$main-lightblue;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    opacity: 90%;
+  }
+  
+  .logo {
+    width: 280px;
+  }
+  
+  .menu-lista {
+    display: flex;
+    justify-content:space-around;
+    text-transform: uppercase;
+  }
+
+  .menu-lista a {
+    color:$main-black;
+    font-size: 23px;
+    font-weight:bolder;
+    padding: 15px;
+  }
+  
+  .menu-lista li a:hover {
+    background: $main-violet;
+  }
+
+   .button {
+    border-radius: 5%;
+    margin-left: 10%;
+    border: 3px solid $main-violet;    
+    box-shadow: 6px 5px 10px -2px ;
+    -webkit-box-shadow: 6px 5px 10px -2px $main-black;
+    -moz-box-shadow: 6px 5px 10px -2px #7030b880;
+    transition: all 0.1s ease-in-out;
+   }
+     
+
+
+ header{
+  width: 100%;
+  height: 110vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: no-repeat center url('../images/headerdarth.png');
+
+ }
+
+ h1{
+  width: 80%;
+  font-family: 'Megrim', cursive;
+  background-color: transparent;
+  color:$main-lightblue;
+  text-align:right;
+  font-size: 43px;
+  margin-bottom: 40px;
+  padding-left: 80%;
+
+ }
+
+ 
+
+    //*Sections
+   .Nosotros {
+    width: 100%;
+    height: auto;
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $main-lightblue;
+   }
+
+   .contenedornosotros{
+    text-align: center;
+   }
+
+   h2,p {
+     color:$main-blue;
+     padding: 5px 5px 5px 5px;
+     font-family:  SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+   }
+
+   //*Nosotros
+
+   .Compras {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    align-content: center;
+  }
+
+     .card {
+      width: 40rem;
+     }
+    
+     .card h3{
+       font-size: 3rem;
+       text-transform: uppercase;
+       color:#eebbc3;
+       text-align: center;
+     }
+     .card p {
+      font-size: 2rem;
+      text-align: center;
+      margin-top: 1rem;
+      text-transform: uppercase;
+      color: $main-lightblue;}
+
+      //*Tienda
+
+      .Tienda {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: $main-lightblue;
+         padding: 8rem 0;
+        text-align: center;
+      }
+
+      .Tienda ul {
+        width: 100%;
+        margin-top: 7rem;
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+    .Tienda li {
+      flex:  0 0 450px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: $main-white;
+      border-radius: 3rem;
+      padding: 3rem;
+      margin-bottom: 5rem;
+      box-shadow: 2px 0px 17px 2px $main-black;
+  }
+      .Tienda li span{
+      text-transform: uppercase;
+      font-size: 2.5em;
+       margin-top: 2rem;
+      }
+
+    .btncompra {
+    background: $main-pink;
+    color:$main-black;
+    text-transform: uppercase;
+    padding: 0.8rem 4rem;
+    font-size: 2rem;
+    font-weight: 6rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+
+    &.disabled {
+        background:$main-lightblue;
+        color: $main-blue;
+        cursor: no-drop;
+    }
+}
+
+  //*Contacto
+
+  .Contacto {
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    background-color:$main-lightblue;
+    padding-bottom: 1rem;
+  
+  }
+  
+  .titulocontacto {
+    font-family: 'Megrim', cursive;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+    line-height: 4.9rem;
+    color: $main-blue;
+    margin-top: 1rem;
+  }
+  
+  
+  .contactoform {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .subtitulo {
+    font-family: 'Megrim', cursive;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .form__input,
+  .textarea {
+    background-color:$main-blue;
+    border: 0.2rem solid $main-white;
+    font-size: 2rem;
+    padding: 2rem;
+  }
+  
+  .form__input {
+    width: 100%;
+    height: 6rem;
+    margin-bottom: 2rem;
+  }
+  
+  .textarea {
+    width: 100%;
+    min-height: 15rem;
+    max-height: 25rem;
+    margin-bottom: 3rem;
+  }
+  
+  .buttonform {
+    background-color: $main-pink;
+    width: 100%;
+    border: 0.2rem solid $main-white;
+    margin-bottom: 2rem;
+    color: $main-blue;
+    border-radius: 0.7rem;
+    padding: 1.5rem;
+    font-size: 2rem;
+    transition: 0.4s all ease-out;
+  }
+  
+  .form__input::placeholder,
+  .textarea::placeholder {
+    color:$main-subpink;
+  }
+  
+  .form__input:focus,
+  .textarea:focus {
+    outline: none;
+  }
+  
+  .form__submit:hover {
+    background-color :$main-subpink;
+    color: $main-white;
+    transition: 0.6s all ease-in;
+  }
+  
+  .form__submit:focus,
+  .alt-button:focus,
+  .main__button:focus {
+    outline: none;
+  }
+
+  //*Footer
+
+footer {
+    width: 100%;
+    padding: 3%;
+    background-color:$main-lightblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.contenedorfooter img{
+  width:60%;
+  height: auto;
+}
+
+.Ubicacion span{
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.Redes{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.Redes img{
+  width:80px;
+  height:auto;
+}
+
+}
+
+//*desktop//
+
+@media (min-width: 1200px) {
+
+  .navegador {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .menu-lista a {
+    font-size: 15px;
+    padding: 10px;
+  }
+  
+
+  .logo {
+    width: 100px;
+  }
+
+  header{
+    width: 100%;
+    height:150vh;
+    background: no-repeat center url('../images/headerdarth2.png');
+   }
+   h1{
+    font-size: 60px;
+    padding-left: 80%;
+  
+   }
+
+   //*nosotros
+
+   .Nosotros {
+    margin-top: 2%;
+    opacity:30%;
+   }
+
+   .contenedornosotros{
+     width:50%;
+   }
+
+   h2,p {
+     font-size: 30px;
+     padding: 20px 20px 20px 20px;
+   }
+
+//*Como comprar
+
+  .contenedorcompras ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 30rem;
+   }
+  
+   .card h3{
+     font-size: 1.7rem;
+   }
+   .card p {
+    font-size: 1.3rem;
+    margin-top: 0.3rem;
+ }
+
+//*tienda
+
+.Tienda {
+   padding: 5rem 0;
+}
+
+.Tienda ul {
+  margin-top: 4rem;
+}
+
+.Tienda li {
+flex:  0 0 350px;
+padding: 5rem;
+margin-bottom: 3rem;
+}
+
+.Tienda li span{
+font-size: 1rem;
+ margin-top: 0.6rem;
+}
+
+
+.btncompra {
+  padding: 0.4rem 2rem;
+  font-size: 1rem;
+  font-weight: 2rem;
+}
+
+//*contacto
+
+.Contacto {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.contenedorcontacto{
+  width:50%;
+}
+
+.titulocontacto {
+  font-size: 2rem;
+}
+
+.subtitulo {
+  font-size: 1rem;
+}
+
+.form__input,
+.textarea {
+  font-size: 0.8rem;
+  padding: 2rem;
+}
+
+.form__input {
+  width: 100%;
+  height: 1rem;
+  margin-bottom: 2rem;
+}
+
+.textarea {
+  width: 100%;
+  height:4rem;
+  margin-bottom: 3rem;
+}
+
+.buttonform {
+  margin-bottom: 2rem;
+  padding: 0.3rem;
+  font-size: 1rem;
+
+}
+
+//*footer
+
+footer {
+  background-color: $main-subpink;
+  height: 100px;
+}
+.contenedorfooter img{
+width:30%;
+height: auto;
+}
+
+.Ubicacion span{
+font-size: 1rem;
+}
+
+.Redes{
+margin-top: 0.5rem;
+}
+
+.Redes img{
+width:40px;
+height:auto;
+}
+
+
+
+
+}
