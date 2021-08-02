@@ -69,13 +69,11 @@ body {
     align-items: center;
     background: no-repeat center url("../images/headerdarth.png"); }
   h1 {
-    width: 80%;
     font-family: 'Megrim', cursive;
     background-color: transparent;
     color: #b8c1ec;
-    text-align: right;
-    font-size: 43px;
-    margin-bottom: 40px;
+    text-align: center;
+    font-size: 30px;
     padding-left: 80%; }
   .Nosotros {
     width: 100%;
@@ -227,18 +225,19 @@ body {
     justify-content: space-between;
     align-items: center; }
   .contenedorfooter img {
-    width: 60%;
+    width: 65%;
     height: auto; }
   .Ubicacion span {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     text-align: center; }
   .Redes {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     margin-top: 2rem; }
   .Redes img {
-    width: 80px;
+    width: 90px;
     height: auto; } }
 
 @media (min-width: 1200px) {
@@ -331,5 +330,5 @@ body {
   .Redes {
     margin-top: 0.5rem; }
   .Redes img {
-    width: 40px;
+    width: 50px;
     height: auto; } }
