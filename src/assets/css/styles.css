@@ -89,7 +89,8 @@ body {
   h2, p {
     color: #232946;
     padding: 5px 5px 5px 5px;
-    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; }
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    font-size: 55px; }
   .Compras {
     display: flex;
     flex-direction: column;
