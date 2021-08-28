@@ -6,6 +6,22 @@ body {
 background-color:$main-blue;
 
 }
+::-webkit-scrollbar{
+  width: 13px;
+  height: 13px;
+  }
+  ::-webkit-scrollbar-thumb{
+  background: linear-gradient(13deg, #9b27df 14%,#dbbdf7 64%);
+  border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover{
+  background: linear-gradient(13deg, #2ce726 14%,#c3e69a 64%);
+  }
+  ::-webkit-scrollbar-track{
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: inset 7px 10px 12px 0px #F0F0F0;
+  }
 
 
 //*mobile
@@ -47,9 +63,6 @@ background-color:$main-blue;
     border-radius: 5%;
     margin-left: 10%;
     border: 3px solid $main-violet;    
-    box-shadow: 6px 5px 10px -2px ;
-    -webkit-box-shadow: 6px 5px 10px -2px $main-black;
-    -moz-box-shadow: 6px 5px 10px -2px #7030b880;
     transition: all 0.1s ease-in-out;
    }
      
@@ -63,17 +76,34 @@ background-color:$main-blue;
   justify-content: center;
   align-items: center;
   background: no-repeat center url('../images/headerdarth.png');
+  background-size: cover;
 
- }
 
  h1{
   font-family: 'Megrim', cursive;
   background-color: transparent;
   color:$main-lightblue;
   text-align:center;
-  font-size: 30px;
-  padding-left: 80%;
+  font-size: 40px;
+  margin-left: 45%;
+  background: rgba( 255, 255, 255, 0.10 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 0.0px );
+  -webkit-backdrop-filter: blur( 0.0px );
+  border-radius: 10px;
+padding: 4rem;
 
+ }
+}
+ 
+ .buttonheader{
+   margin-top: 10px;
+   border-radius: 25%;
+   border: 2px solid black;
+   background-color: $main-subpink;
+   padding:7%;
+   font-size: 50px;
+   color: black;
  }
 
  
@@ -87,7 +117,6 @@ background-color:$main-blue;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: $main-lightblue;
    }
 
    .contenedornosotros{
@@ -95,7 +124,7 @@ background-color:$main-blue;
    }
 
    h2,p {
-     color:$main-blue;
+     color:$main-subpink;
      padding: 5px 5px 5px 5px;
      font-family:  SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
      font-size: 55px;
@@ -113,20 +142,23 @@ background-color:$main-blue;
 
      .card {
       width: 40rem;
-     }
+     
     
-     .card h3{
+     h3{
        font-size: 3rem;
        text-transform: uppercase;
        color:#eebbc3;
        text-align: center;
-     }
-     .card p {
+     
+      p {
       font-size: 2rem;
       text-align: center;
       margin-top: 1rem;
       text-transform: uppercase;
-      color: $main-lightblue;}
+      color: $main-lightblue;
+      }
+     }
+    }
 
       //*Tienda
 
@@ -138,9 +170,9 @@ background-color:$main-blue;
         background: $main-lightblue;
          padding: 8rem 0;
         text-align: center;
-      }
+      
 
-      .Tienda ul {
+      ul {
         width: 100%;
         margin-top: 7rem;
         display:flex;
@@ -149,30 +181,35 @@ background-color:$main-blue;
         align-items: center;
         flex-wrap: wrap;
 
-    }
-    .Tienda li {
-      flex:  0 0 450px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: $main-white;
-      border-radius: 3rem;
-      padding: 3rem;
-      margin-bottom: 5rem;
-      box-shadow: 2px 0px 17px 2px $main-black;
-  }
-      .Tienda li span{
+    
+          li {
+          flex:  0 0 450px;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         background: $main-white;
+         border-radius: 3rem;
+         padding: 3rem;
+         margin-bottom: 5rem;
+         box-shadow: 2px 0px 17px 2px $main-black;
+  
+      span{
+      font-weight: bolder;
       text-transform: uppercase;
       font-size: 2.5em;
        margin-top: 2rem;
+       margin-bottom: 2rem;
       }
+    }
+  }
+ }
 
     .btncompra {
     background: $main-pink;
     color:$main-black;
     text-transform: uppercase;
-    padding: 0.8rem 4rem;
+    padding: 0.9rem 5rem;
     font-size: 2rem;
     font-weight: 6rem;
     border: none;
@@ -223,6 +260,7 @@ background-color:$main-blue;
   
   .form__input,
   .textarea {
+    color:$main-subpink;
     background-color:$main-blue;
     border: 0.2rem solid $main-white;
     font-size: 2rem;
@@ -230,6 +268,7 @@ background-color:$main-blue;
   }
   
   .form__input {
+    color:$main-subpink;
     width: 100%;
     height: 6rem;
     margin-bottom: 2rem;
@@ -252,6 +291,7 @@ background-color:$main-blue;
     padding: 1.5rem;
     font-size: 2rem;
     transition: 0.4s all ease-out;
+    
   }
   
   .form__input::placeholder,
@@ -303,15 +343,13 @@ footer {
   justify-content: space-around;
   align-items: center;
   margin-top: 2rem;
-}
 
-.Redes img{
-  width:90px;
-  height:auto;
+     img{
+      width:90px;
+      height:auto;
+   }
+ }
 }
-
-}
-
 //*desktop//
 
 @media (min-width: 1200px) {
@@ -336,18 +374,18 @@ footer {
     width: 100%;
     height:150vh;
     background: no-repeat center url('../images/headerdarth2.png');
-   }
+    background-size: cover;
+   
+
    h1{
     font-size: 60px;
-    padding-left: 80%;
-  
    }
+  }
 
    //*nosotros
 
    .Nosotros {
     margin-top: 2%;
-    opacity:30%;
    }
 
    .contenedornosotros{
@@ -364,11 +402,12 @@ footer {
   .contenedorcompras ul {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
   }
   
   .card {
-    width: 30rem;
+    width: 27rem;
+    margin-bottom: 4rem;
    }
   
    .card h3{
@@ -383,30 +422,39 @@ footer {
 
 .Tienda {
    padding: 5rem 0;
-}
 
-.Tienda ul {
+
+   ul {
   margin-top: 4rem;
-}
+   
 
-.Tienda li {
-flex:  0 0 350px;
-padding: 5rem;
-margin-bottom: 3rem;
-}
+     li {
+    flex:  0 0 350px;
+    padding: 5rem;
+    margin-bottom: 3rem;
+    cursor: url('../images/gatito.png'),auto;
 
-.Tienda li span{
-font-size: 1rem;
- margin-top: 0.6rem;
+
+        span{
+        font-size: 1rem;
+         margin-top: 0.3rem;
+        }
+     }
+    }
 }
 
 
 .btncompra {
-  padding: 0.4rem 2rem;
+  padding: 0.9rem 3.9rem;
   font-size: 1rem;
   font-weight: 2rem;
+  cursor: pointer;
+  
 }
 
+.btncompra :hover {
+  background: #9b27df;
+}
 //*contacto
 
 .Contacto {
@@ -472,11 +520,11 @@ font-size: 1rem;
 
 .Redes{
 margin-top: 0.5rem;
-}
 
-.Redes img{
-width:50px;
-height:auto;
+    img{
+    width:50px;
+    height:auto;
+  }
 }
 
 
