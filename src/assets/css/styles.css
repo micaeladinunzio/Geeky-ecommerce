@@ -29,6 +29,22 @@ main {
 body {
   background-color: #232946; }
 
+::-webkit-scrollbar {
+  width: 13px;
+  height: 13px; }
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(13deg, #9b27df 14%, #dbbdf7 64%);
+  border-radius: 10px; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(13deg, #2ce726 14%, #c3e69a 64%); }
+
+::-webkit-scrollbar-track {
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: inset 7px 10px 12px 0px #F0F0F0; }
+
 @media (min-width: 320px) {
   .navegador {
     position: fixed;
@@ -56,9 +72,6 @@ body {
     border-radius: 5%;
     margin-left: 10%;
     border: 3px solid #7631B2;
-    box-shadow: 6px 5px 10px -2px;
-    -webkit-box-shadow: 6px 5px 10px -2px #000000;
-    -moz-box-shadow: 6px 5px 10px -2px #7030b880;
     transition: all 0.1s ease-in-out; }
   header {
     width: 100%;
@@ -67,14 +80,29 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: no-repeat center url("../images/headerdarth.png"); }
-  h1 {
-    font-family: 'Megrim', cursive;
-    background-color: transparent;
-    color: #b8c1ec;
-    text-align: center;
-    font-size: 30px;
-    padding-left: 80%; }
+    background: no-repeat center url("../images/headerdarth.png");
+    background-size: cover; }
+    header h1 {
+      font-family: 'Megrim', cursive;
+      background-color: transparent;
+      color: #b8c1ec;
+      text-align: center;
+      font-size: 40px;
+      margin-left: 45%;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(0px);
+      -webkit-backdrop-filter: blur(0px);
+      border-radius: 10px;
+      padding: 4rem; }
+  .buttonheader {
+    margin-top: 10px;
+    border-radius: 25%;
+    border: 2px solid black;
+    background-color: #ffc0cb;
+    padding: 7%;
+    font-size: 50px;
+    color: black; }
   .Nosotros {
     width: 100%;
     height: auto;
@@ -82,12 +110,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background-color: #b8c1ec; }
+    align-items: center; }
   .contenedornosotros {
     text-align: center; }
   h2, p {
-    color: #232946;
+    color: #ffc0cb;
     padding: 5px 5px 5px 5px;
     font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     font-size: 55px; }
@@ -99,17 +126,17 @@ body {
     align-content: center; }
   .card {
     width: 40rem; }
-  .card h3 {
-    font-size: 3rem;
-    text-transform: uppercase;
-    color: #eebbc3;
-    text-align: center; }
-  .card p {
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 1rem;
-    text-transform: uppercase;
-    color: #b8c1ec; }
+    .card h3 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      color: #eebbc3;
+      text-align: center; }
+      .card h3 p {
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 1rem;
+        text-transform: uppercase;
+        color: #b8c1ec; }
   .Tienda {
     display: flex;
     flex-direction: column;
@@ -118,34 +145,36 @@ body {
     background: #b8c1ec;
     padding: 8rem 0;
     text-align: center; }
-  .Tienda ul {
-    width: 100%;
-    margin-top: 7rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; }
-  .Tienda li {
-    flex: 0 0 450px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #FFFFFD;
-    border-radius: 3rem;
-    padding: 3rem;
-    margin-bottom: 5rem;
-    box-shadow: 2px 0px 17px 2px #000000; }
-  .Tienda li span {
-    text-transform: uppercase;
-    font-size: 2.5em;
-    margin-top: 2rem; }
+    .Tienda ul {
+      width: 100%;
+      margin-top: 7rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap; }
+      .Tienda ul li {
+        flex: 0 0 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #FFFFFD;
+        border-radius: 3rem;
+        padding: 3rem;
+        margin-bottom: 5rem;
+        box-shadow: 2px 0px 17px 2px #000000; }
+        .Tienda ul li span {
+          font-weight: bolder;
+          text-transform: uppercase;
+          font-size: 2.5em;
+          margin-top: 2rem;
+          margin-bottom: 2rem; }
   .btncompra {
     background: #e9a1ac;
     color: #000000;
     text-transform: uppercase;
-    padding: 0.8rem 4rem;
+    padding: 0.9rem 5rem;
     font-size: 2rem;
     font-weight: 6rem;
     border: none;
@@ -180,11 +209,13 @@ body {
     text-align: center; }
   .form__input,
   .textarea {
+    color: #ffc0cb;
     background-color: #232946;
     border: 0.2rem solid #FFFFFD;
     font-size: 2rem;
     padding: 2rem; }
   .form__input {
+    color: #ffc0cb;
     width: 100%;
     height: 6rem;
     margin-bottom: 2rem; }
@@ -237,9 +268,9 @@ body {
     justify-content: space-around;
     align-items: center;
     margin-top: 2rem; }
-  .Redes img {
-    width: 90px;
-    height: auto; } }
+    .Redes img {
+      width: 90px;
+      height: auto; } }
 
 @media (min-width: 1200px) {
   .navegador {
@@ -254,13 +285,12 @@ body {
   header {
     width: 100%;
     height: 150vh;
-    background: no-repeat center url("../images/headerdarth2.png"); }
-  h1 {
-    font-size: 60px;
-    padding-left: 80%; }
+    background: no-repeat center url("../images/headerdarth2.png");
+    background-size: cover; }
+    header h1 {
+      font-size: 60px; }
   .Nosotros {
-    margin-top: 2%;
-    opacity: 30%; }
+    margin-top: 2%; }
   .contenedornosotros {
     width: 50%; }
   h2, p {
@@ -269,9 +299,10 @@ body {
   .contenedorcompras ul {
     display: flex;
     flex-direction: row;
-    justify-content: center; }
+    justify-content: space-between; }
   .card {
-    width: 30rem; }
+    width: 27rem;
+    margin-bottom: 4rem; }
   .card h3 {
     font-size: 1.7rem; }
   .card p {
@@ -279,19 +310,23 @@ body {
     margin-top: 0.3rem; }
   .Tienda {
     padding: 5rem 0; }
-  .Tienda ul {
-    margin-top: 4rem; }
-  .Tienda li {
-    flex: 0 0 350px;
-    padding: 5rem;
-    margin-bottom: 3rem; }
-  .Tienda li span {
-    font-size: 1rem;
-    margin-top: 0.6rem; }
+    .Tienda ul {
+      margin-top: 4rem; }
+      .Tienda ul li {
+        flex: 0 0 350px;
+        padding: 5rem;
+        margin-bottom: 3rem;
+        cursor: url("../images/gatito.png"), auto; }
+        .Tienda ul li span {
+          font-size: 1rem;
+          margin-top: 0.3rem; }
   .btncompra {
-    padding: 0.4rem 2rem;
+    padding: 0.9rem 3.9rem;
     font-size: 1rem;
-    font-weight: 2rem; }
+    font-weight: 2rem;
+    cursor: pointer; }
+  .btncompra :hover {
+    background: #9b27df; }
   .Contacto {
     width: 100%;
     display: flex;
@@ -330,6 +365,6 @@ body {
     font-size: 1rem; }
   .Redes {
     margin-top: 0.5rem; }
-  .Redes img {
-    width: 50px;
-    height: auto; } }
+    .Redes img {
+      width: 50px;
+      height: auto; } }
